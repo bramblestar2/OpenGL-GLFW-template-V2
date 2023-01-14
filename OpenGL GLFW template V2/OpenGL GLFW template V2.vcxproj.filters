@@ -51,6 +51,9 @@
     <ClCompile Include="Source Files\Graphics\Event.cpp">
       <Filter>Source Files\Graphics</Filter>
     </ClCompile>
+    <ClCompile Include="Source Files\Graphics\EventHandler.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GLFW Header.h">
@@ -75,6 +78,9 @@
       <Filter>Header Files\Graphics</Filter>
     </ClInclude>
     <ClInclude Include="Headers\Graphics\Event.h">
+      <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Graphics\EventHandler.h">
       <Filter>Header Files\Graphics</Filter>
     </ClInclude>
   </ItemGroup>

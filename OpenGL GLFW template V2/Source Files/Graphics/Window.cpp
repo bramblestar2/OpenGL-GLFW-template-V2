@@ -31,6 +31,8 @@ jf::Window::Window(const int width, const int height,
 	glfwSetWindowPos(m_window, t_width / 2 - (width / 2), t_height / 2 - (height / 2));
 	
 	glfwMakeContextCurrent(m_window);
+
+	m_event_handler.setWindowCallbacks(m_window);
 }
 
 jf::Window::~Window()
@@ -96,6 +98,11 @@ void jf::Window::setVisibility(const bool isVisible)
 	glfwSetWindowAttrib(m_window, GLFW_VISIBLE, isVisible);
 }
 
+void jf::Window::setDecorated(const bool isDecorated)
+{
+	glfwSetWindowAttrib(m_window, GLFW_DECORATED, isDecorated ? true : false);
+}
+
 void jf::Window::useView()
 {
 	if (m_cameraActive)
@@ -136,7 +143,16 @@ void jf::Window::close()
 bool jf::Window::poll_events(Event& event)
 {
 	glfwPollEvents();
-	return false;
+
+	if (!m_event_handler.isEmpty())
+	{
+		m_event_handler.pop_event();
+		event = m_event_handler.top_event();
+
+		return true;
+	}
+	else
+		return false;
 }
 
 void jf::Window::display()
