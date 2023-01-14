@@ -109,3 +109,27 @@ void jf::Window::useCamera()
 
 	m_cameraActive = true;
 }
+
+void jf::Window::clear(const Color color)
+{
+	clear(color.r /255, color.g/255, color.b/255, color.a/255);
+}
+
+void jf::Window::clear(const float r, const float g, const float b, const float a)
+{
+	glClearColor(r, g, b, a);
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+}
+
+void jf::Window::clear()
+{
+	clear(0, 0, 0, 1);
+}
+
+void jf::Window::close()
+{
+}
+
+void jf::Window::display()
+{
+}

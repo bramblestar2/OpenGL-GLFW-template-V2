@@ -71,20 +71,20 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>$(SolutionDir)\Dependencies\x86\include\;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)\Dependencies\x86\lib\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)\Dependencies\Win 32\includes\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)\Dependencies\Win 32\libs\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>$(SolutionDir)\Dependencies\x86\include\;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)\Dependencies\x86\lib\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)\Dependencies\Win 32\includes\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)\Dependencies\Win 32\libs\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(SolutionDir)\Dependencies\x64\include\;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)\Dependencies\x64\lib\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)\Dependencies\x64\includes\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)\Dependencies\x64\libs\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>$(SolutionDir)\Dependencies\x64\include\;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)\Dependencies\x64\lib\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)\Dependencies\x64\includes\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)\Dependencies\x64\libs\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

@@ -34,19 +34,31 @@ namespace jf
 
 	template <typename T>
 	Vector2<T>& operator+=(Vector2<T>& left, const Vector2<T>& right)
-	{ return left + right; }
+	{ 
+		left = left + right;
+		return left; 
+	}
 
 	template <typename T>
 	Vector2<T>& operator-=(Vector2<T>& left, const Vector2<T>& right)
-	{ return left - right; }
+	{
+		left = left - right;
+		return left;
+	}
 
 	template <typename T>
 	Vector2<T>& operator*=(Vector2<T>& left, const Vector2<T>& right)
-	{ return left * right; }
+	{
+		left = left * right;
+		return left;
+	}
 
 	template <typename T>
 	Vector2<T>& operator/=(Vector2<T>& left, const Vector2<T>& right)
-	{ return left / right; }
+	{
+		left = left / right;
+		return left;
+	}
 
 	template <typename T>
 	bool operator==(const Vector2<T>& left, const Vector2<T>& right)

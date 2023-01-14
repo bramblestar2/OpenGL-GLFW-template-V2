@@ -14,10 +14,6 @@ namespace jf
 		float g = 0;
 		float b = 0;
 		float a = 0;
-
-		//Returns values between 0 and 1
-		//for opengl uses
-		Color toGL();
 	};
 
 }
