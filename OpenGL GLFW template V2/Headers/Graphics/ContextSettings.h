@@ -20,6 +20,7 @@ namespace jf
 		int minor = 1;
 		int major = 2;
 		int refreshRate = 0;
+		int profile = GLFW_OPENGL_CORE_PROFILE;
 
 		bool floating = false;
 		bool resizable = true;

@@ -16,15 +16,15 @@ namespace jf
 		virtual ~Window();
 
 		/* Gets */
-		Vector2i getPosition();
-		Vector2i getSize();
+		Vector2i getPosition() const;
+		Vector2i getSize() const;
 		GLFWwindow* getWindow() const; //Gets the GLFW Window
 		bool isVisible() const;
 		bool isFocused() const;
 		bool isOpen() const;
 
 		/* Sets */
-		void setPosition(const double x, const double y);
+		void setPosition(const int x, const int y);
 		void setTitle(const std::string title);
 		void setAspectRatio(const int numerator, const int denominator);
 		void setVisibility(const bool isVisible);
@@ -42,8 +42,8 @@ namespace jf
 	private:
 		GLFWwindow* m_window;
 
-		bool viewActive;
-		bool cameraActive;
+		bool m_viewActive;
+		bool m_cameraActive;
 	};
 
 }

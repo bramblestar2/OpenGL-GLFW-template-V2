@@ -45,6 +45,9 @@
     <ClCompile Include="Source Files\Graphics\Color.cpp">
       <Filter>Source Files\Graphics</Filter>
     </ClCompile>
+    <ClCompile Include="Source Files\Graphics\View.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GLFW Header.h">
@@ -63,6 +66,9 @@
       <Filter>Header Files\Graphics</Filter>
     </ClInclude>
     <ClInclude Include="Headers\Graphics\Color.h">
+      <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Graphics\View.h">
       <Filter>Header Files\Graphics</Filter>
     </ClInclude>
   </ItemGroup>

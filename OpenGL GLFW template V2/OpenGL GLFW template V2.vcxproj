@@ -150,6 +150,7 @@
     <ClCompile Include="OpenGL GLFW template V2.cpp" />
     <ClCompile Include="Source Files\Graphics\Color.cpp" />
     <ClCompile Include="Source Files\Graphics\ContextSettings.cpp" />
+    <ClCompile Include="Source Files\Graphics\View.cpp" />
     <ClCompile Include="Source Files\Graphics\Window.cpp" />
     <ClCompile Include="Source Files\System\Vector2.cpp" />
     <ClCompile Include="Source Files\System\Vector3.cpp" />
@@ -158,6 +159,7 @@
     <ClInclude Include="GLFW Header.h" />
     <ClInclude Include="Headers\Graphics\Color.h" />
     <ClInclude Include="Headers\Graphics\ContextSettings.h" />
+    <ClInclude Include="Headers\Graphics\View.h" />
     <ClInclude Include="Headers\Graphics\Window.h" />
     <ClInclude Include="Headers\System\Vector2.h" />
     <ClInclude Include="Headers\System\Vector3.h" />

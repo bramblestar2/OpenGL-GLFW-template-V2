@@ -9,6 +9,8 @@ namespace jf
 		Vector2(T x, T y)
 			: x(x), y(y)
 		{ }
+		Vector2()
+		{ x = 0; y = 0; }
 
 		T x;
 		T y;
