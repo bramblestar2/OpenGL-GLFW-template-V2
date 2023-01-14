@@ -48,11 +48,11 @@ namespace jf
 
 	template <typename T>
 	bool operator==(const Vector2<T>& left, const Vector2<T>& right)
-	{ return (left.x == right.x && left.y == right.y) }
+	{ return (left.x == right.x && left.y == right.y); }
 
 	template <typename T>
 	bool operator!=(const Vector2<T>& left, const Vector2<T>& right)
-	{ return (left.x != right.x && left.y != right.y) }
+	{ return (left.x != right.x && left.y != right.y); }
 
 	typedef Vector2<float> Vector2f;
 	typedef Vector2<unsigned int> Vector2u;
