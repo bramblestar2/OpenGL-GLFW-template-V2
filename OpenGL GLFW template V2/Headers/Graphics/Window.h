@@ -4,6 +4,7 @@
 #include "../System/Vector2.h"
 #include "../Graphics/ContextSettings.h"
 #include "../Graphics/Color.h"
+#include "Event.h"
 
 namespace jf 
 {
@@ -36,6 +37,8 @@ namespace jf
 		void clear(const float r, const float g, const float b, const float a = 255);
 		void clear();
 		void close();
+
+		bool poll_events(Event& event);
 
 		virtual void display();
 

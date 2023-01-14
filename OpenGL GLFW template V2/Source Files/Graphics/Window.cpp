@@ -3,6 +3,7 @@
 jf::Window::Window(const int width, const int height, 
 	const std::string title, const ContextSettings settings)
 {
+	m_window = nullptr;
 	m_cameraActive = false;
 	m_viewActive = false;
 
@@ -11,7 +12,7 @@ jf::Window::Window(const int width, const int height,
 	glfwWindowHint(GLFW_SAMPLES, settings.antiAliasing);
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, settings.minor);
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, settings.major);
-	glfwWindowHint(GLFW_OPENGL_PROFILE, settings.profile);
+	//glfwWindowHint(GLFW_OPENGL_PROFILE, settings.profile);
 	glfwWindowHint(GLFW_REFRESH_RATE, settings.refreshRate);
 	glfwWindowHint(GLFW_RESIZABLE, settings.resizable);
 	glfwWindowHint(GLFW_SRGB_CAPABLE, settings.sRGB);
@@ -19,8 +20,8 @@ jf::Window::Window(const int width, const int height,
 	glfwWindowHint(GLFW_DECORATED, settings.decorated);
 	glfwWindowHint(GLFW_TRANSPARENT_FRAMEBUFFER, settings.transparent);
 
-	m_window = glfwCreateWindow(width, height, title.c_str(), NULL, NULL);
-	
+	m_window = glfwCreateWindow(width, height, title.c_str(), nullptr, nullptr);
+
 	//Set position of window to the center of screen
 	int count;
 	GLFWmonitor** monitors = glfwGetMonitors(&count);
@@ -34,6 +35,7 @@ jf::Window::Window(const int width, const int height,
 
 jf::Window::~Window()
 {
+	glfwDestroyWindow(m_window);
 }
 
 jf::Vector2i jf::Window::getPosition() const
@@ -71,7 +73,7 @@ bool jf::Window::isFocused() const
 
 bool jf::Window::isOpen() const
 {
-	return glfwWindowShouldClose(m_window) == 0 ? false : true;
+	return glfwWindowShouldClose(m_window) == 0 ? true : false;
 }
 
 void jf::Window::setPosition(const int x, const int y)
@@ -128,8 +130,23 @@ void jf::Window::clear()
 
 void jf::Window::close()
 {
+	glfwSetWindowShouldClose(m_window, 1);
+}
+
+bool jf::Window::poll_events(Event& event)
+{
+	glfwPollEvents();
+	return false;
 }
 
 void jf::Window::display()
 {
+	if (m_viewActive)
+	{
+	}
+	else if (m_cameraActive)
+	{
+	}
+
+	glfwSwapBuffers(m_window);
 }
