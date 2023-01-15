@@ -4,8 +4,6 @@ jf::Window::Window(const int width, const int height,
 	const std::string title, const ContextSettings settings)
 {
 	m_window = nullptr;
-	m_cameraActive = false;
-	m_viewActive = false;
 
 	glfwWindowHint(GLFW_DEPTH_BITS, settings.depthBits);
 	glfwWindowHint(GLFW_STENCIL_BITS, settings.stencilBits);
@@ -103,22 +101,6 @@ void jf::Window::setDecorated(const bool isDecorated)
 	glfwSetWindowAttrib(m_window, GLFW_DECORATED, isDecorated ? true : false);
 }
 
-void jf::Window::useView()
-{
-	if (m_cameraActive)
-		m_cameraActive = false;
-
-	m_viewActive = true;
-}
-
-void jf::Window::useCamera()
-{
-	if (m_viewActive)
-		m_viewActive = false;
-
-	m_cameraActive = true;
-}
-
 void jf::Window::clear(const Color color)
 {
 	clear(color.r /255, color.g/255, color.b/255, color.a/255);
@@ -157,12 +139,5 @@ bool jf::Window::poll_events(Event& event)
 
 void jf::Window::display()
 {
-	if (m_viewActive)
-	{
-	}
-	else if (m_cameraActive)
-	{
-	}
-
 	glfwSwapBuffers(m_window);
 }

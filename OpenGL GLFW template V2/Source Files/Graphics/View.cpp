@@ -5,15 +5,11 @@ jf::View::View(const Vector2f size, const Vector2f position)
 	: m_size(size), m_position(position)
 {
 	m_update = true;
-
-	model = glm::mat4(1.f);
 }
 
 jf::View::View() : m_size(jf::Vector2f(1, 1)), m_position(jf::Vector2f())
 {
 	m_update = true;
-
-	model = glm::mat4(1.f);
 }
 
 void jf::View::setPosition(const jf::Vector2f position)
@@ -30,7 +26,8 @@ void jf::View::setSize(const jf::Vector2f size)
 
 void jf::View::move(const jf::Vector2f offset)
 {
-	m_position += offset;
+	m_position.x += offset.x;
+	m_position.y += offset.y;
 	m_update = true;
 }
 

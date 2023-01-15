@@ -32,9 +32,6 @@ namespace jf
 		void setVisibility(const bool isVisible);
 		void setDecorated(const bool isDecorated);
 
-		void useView();
-		void useCamera();
-
 		void clear(const Color color);
 		void clear(const float r, const float g, const float b, const float a = 255);
 		void clear();
@@ -48,9 +45,6 @@ namespace jf
 		GLFWwindow* m_window;
 
 		EventHandler m_event_handler;
-
-		bool m_viewActive;
-		bool m_cameraActive;
 	};
 
 }

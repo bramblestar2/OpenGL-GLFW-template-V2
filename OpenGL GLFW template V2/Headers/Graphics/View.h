@@ -27,9 +27,6 @@ namespace jf
 		Vector2f m_size;
 		Vector2f m_position;
 
-		glm::mat4 model;
-		glm::mat4 ortho;
-
 		bool m_update;
 	};
 
