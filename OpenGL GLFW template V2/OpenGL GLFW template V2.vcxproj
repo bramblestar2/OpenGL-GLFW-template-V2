@@ -152,6 +152,7 @@
     <ClCompile Include="Source Files\Graphics\ContextSettings.cpp" />
     <ClCompile Include="Source Files\Graphics\Event.cpp" />
     <ClCompile Include="Source Files\Graphics\EventHandler.cpp" />
+    <ClCompile Include="Source Files\Graphics\Shader.cpp" />
     <ClCompile Include="Source Files\Graphics\View.cpp" />
     <ClCompile Include="Source Files\Graphics\Window.cpp" />
     <ClCompile Include="Source Files\System\Vector2.cpp" />
@@ -163,10 +164,15 @@
     <ClInclude Include="Headers\Graphics\ContextSettings.h" />
     <ClInclude Include="Headers\Graphics\Event.h" />
     <ClInclude Include="Headers\Graphics\EventHandler.h" />
+    <ClInclude Include="Headers\Graphics\Shader.h" />
     <ClInclude Include="Headers\Graphics\View.h" />
     <ClInclude Include="Headers\Graphics\Window.h" />
     <ClInclude Include="Headers\System\Vector2.h" />
     <ClInclude Include="Headers\System\Vector3.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="2dShader.frag" />
+    <None Include="2dShader.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

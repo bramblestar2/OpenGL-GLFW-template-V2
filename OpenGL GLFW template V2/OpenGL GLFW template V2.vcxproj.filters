@@ -25,6 +25,9 @@
     <Filter Include="Source Files\System">
       <UniqueIdentifier>{d9efd262-0e86-455b-bea4-df53d3c3e598}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\Shaders">
+      <UniqueIdentifier>{bad66141-f814-4e32-8d65-e7070e802f1f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OpenGL GLFW template V2.cpp">
@@ -52,6 +55,9 @@
       <Filter>Source Files\Graphics</Filter>
     </ClCompile>
     <ClCompile Include="Source Files\Graphics\EventHandler.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Source Files\Graphics\Shader.cpp">
       <Filter>Source Files\Graphics</Filter>
     </ClCompile>
   </ItemGroup>
@@ -83,5 +89,16 @@
     <ClInclude Include="Headers\Graphics\EventHandler.h">
       <Filter>Header Files\Graphics</Filter>
     </ClInclude>
+    <ClInclude Include="Headers\Graphics\Shader.h">
+      <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="2dShader.vert">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+    <None Include="2dShader.frag">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
   </ItemGroup>
 </Project>
