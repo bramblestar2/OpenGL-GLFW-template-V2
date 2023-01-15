@@ -14,12 +14,6 @@ void error_callback(int error, const char* msg)
 
 int main()
 {
-    jf::Vertex vertex;
-    vertex.x = 5;
-
-    for (int i = 0; i < 12; i++)
-        std::cout << *vertex.data[i] << std::endl;
-
     if (!glfwInit())
         return -1;
 
@@ -34,34 +28,23 @@ int main()
 
     jf::View view({ 500, 300 }, { 0,0 });
 
-    float square[] =
-    {
-        -0.5f, -0.5f, 0.0f,   1.f, 0.f, 0.f,
-        -0.5f, 0.5f,  0.0f,   0.f, 0.f, 1.f,
-        0.5f, 0.5f,   0.0f,   0.f, 1.f, 0.f,
-
-        -0.5f, -0.5f, 0.0f,   1.f, 0.f, 0.f,
-        0.5f, 0.5f,  0.0f,    0.f, 1.f, 0.f,
-        0.5f, -0.5f,   0.0f,  0.f, 0.f, 1.f,
-    };
-
-    unsigned int VBO, VAO;
-    glGenVertexArrays(1, &VAO);
-    glGenBuffers(1, &VBO);
-    // bind the Vertex Array Object first, then bind and set vertex buffer(s), and then configure vertex attributes(s).
-    glBindVertexArray(VAO);
-
-    glBindBuffer(GL_ARRAY_BUFFER, VBO);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(square), square, GL_STATIC_DRAW);
-
-    // position attribute
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (const void*)0);
-    glEnableVertexAttribArray(0);
-    // color attribute
-    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (const void*)(3 * sizeof(float)));
-    glEnableVertexAttribArray(1);
-
     Shader shader("2dShader.vert", "2dShader.frag");
+
+    jf::VertexArray arr;
+    arr.add(jf::Vertex{ glm::vec3(-0.5f, -0.5f, 0.0f), glm::vec4(1.f, 0.f, 0.f, 1.0f) });
+    arr.add(jf::Vertex{ glm::vec3(-0.5f, 0.5f,  0.0f), glm::vec4(0.f, 0.f, 1.f, 1.0f) });
+    arr.add(jf::Vertex{ glm::vec3(0.5f, 0.5f,   0.0f), glm::vec4(0.f, 1.f, 0.f, 1.0f) });
+    arr.add(jf::Vertex{ glm::vec3(-0.5f, -0.5f, 0.0f), glm::vec4(1.f, 0.f, 0.f, 1.0f) });
+    arr.add(jf::Vertex{ glm::vec3(0.5f, 0.5f,   0.0f), glm::vec4(0.f, 1.f, 0.f, 1.0f) });
+    arr.add(jf::Vertex{ glm::vec3(0.5f, -0.5f,  0.0f), glm::vec4(0.f, 0.f, 1.f, 1.0f) });
+
+    jf::VertexArray arrTwo;
+    arrTwo.add(jf::Vertex{ glm::vec3(-1, -1, 1), glm::vec4(1.f, 0.f, 0.f, 1) });
+    arrTwo.add(jf::Vertex{ glm::vec3(-1, 1,  1), glm::vec4(0.f, 0.f, 1.f, 1) });
+    arrTwo.add(jf::Vertex{ glm::vec3(1, 1,   1), glm::vec4(0.f, 1.f, 0.f, 1) });
+    arrTwo.add(jf::Vertex{ glm::vec3(-1, -1, 1), glm::vec4(1.f, 0.f, 0.f, 1) });
+    arrTwo.add(jf::Vertex{ glm::vec3(1, 1,   1), glm::vec4(0.f, 1.f, 0.f, 1) });
+    arrTwo.add(jf::Vertex{ glm::vec3(1, -1,  1), glm::vec4(0.f, 0.f, 1.f, 1) });
 
     while (window.isOpen())
     {
@@ -82,17 +65,12 @@ int main()
 
         window.clear();
 
-
         shader.use();
-        glBindVertexArray(VAO);
-        glDrawArrays(GL_TRIANGLES, 0, 6);
-
+        arrTwo.draw(GL_TRIANGLES);
+        arr.draw(GL_TRIANGLES);
 
         window.display();
     }
-    
-    glDeleteVertexArrays(1, &VAO);
-    glDeleteBuffers(1, &VBO);
 
     glfwTerminate();
     return 0;
