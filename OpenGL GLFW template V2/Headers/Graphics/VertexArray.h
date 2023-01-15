@@ -23,7 +23,7 @@ namespace jf
 
 
 		/* Subscript Operator */
-		Vertex* operator[](int index);
+		Vertex& operator[](int index);
 
 	private:
 		std::vector<Vertex> m_verticies;

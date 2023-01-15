@@ -63,7 +63,12 @@ int main()
             }
         }
 
+        double xpos, ypos;
+        glfwGetCursorPos(window.getWindow(), &xpos, &ypos);
+
         window.clear();
+
+        arrTwo[0].position = glm::vec3(xpos/window.getSize().x - 0.5f, -ypos/window.getSize().y + 0.5f, 0);
 
         shader.use();
         arrTwo.draw(GL_TRIANGLES);

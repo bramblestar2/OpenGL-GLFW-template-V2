@@ -55,9 +55,14 @@ void jf::VertexArray::draw(const GLenum type)
     glDrawArrays(type, 0, m_verticies.size());
 }
 
-jf::Vertex* jf::VertexArray::operator[](int index)
+jf::Vertex& jf::VertexArray::operator[](int index)
 {
-    return &m_verticies.at(index);
+    glDeleteVertexArrays(1, &VAO);
+    glDeleteBuffers(1, &VBO);
+
+    updateBuffers();
+
+    return m_verticies.at(index);
 }
 
 void jf::VertexArray::updateBuffers()
@@ -68,7 +73,7 @@ void jf::VertexArray::updateBuffers()
     glBindVertexArray(VAO);
 
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
-    glBufferData(GL_ARRAY_BUFFER, count() * 12 * sizeof(float), m_verticies.data(), GL_STATIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, count() * 12 * sizeof(float), m_verticies.data(), GL_DYNAMIC_DRAW);
 
     // position attribute
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 12 * sizeof(float), (const void*)0);
