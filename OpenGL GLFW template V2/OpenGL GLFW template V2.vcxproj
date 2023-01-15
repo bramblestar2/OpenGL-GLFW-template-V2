@@ -153,6 +153,8 @@
     <ClCompile Include="Source Files\Graphics\Event.cpp" />
     <ClCompile Include="Source Files\Graphics\EventHandler.cpp" />
     <ClCompile Include="Source Files\Graphics\Shader.cpp" />
+    <ClCompile Include="Source Files\Graphics\Vertex.cpp" />
+    <ClCompile Include="Source Files\Graphics\VertexArray.cpp" />
     <ClCompile Include="Source Files\Graphics\View.cpp" />
     <ClCompile Include="Source Files\Graphics\Window.cpp" />
     <ClCompile Include="Source Files\System\Vector2.cpp" />
@@ -165,6 +167,8 @@
     <ClInclude Include="Headers\Graphics\Event.h" />
     <ClInclude Include="Headers\Graphics\EventHandler.h" />
     <ClInclude Include="Headers\Graphics\Shader.h" />
+    <ClInclude Include="Headers\Graphics\Vertex.h" />
+    <ClInclude Include="Headers\Graphics\VertexArray.h" />
     <ClInclude Include="Headers\Graphics\View.h" />
     <ClInclude Include="Headers\Graphics\Window.h" />
     <ClInclude Include="Headers\System\Vector2.h" />

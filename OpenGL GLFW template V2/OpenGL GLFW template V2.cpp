@@ -3,6 +3,8 @@
 #include "Headers/Graphics/View.h"
 #include "Headers/Graphics/Shader.h"
 
+#include "Headers/Graphics/VertexArray.h"
+
 void error_callback(int error, const char* msg)
 {
     std::string s;
@@ -12,6 +14,12 @@ void error_callback(int error, const char* msg)
 
 int main()
 {
+    jf::Vertex vertex;
+    vertex.x = 5;
+
+    for (int i = 0; i < 12; i++)
+        std::cout << *vertex.data[i] << std::endl;
+
     if (!glfwInit())
         return -1;
 
@@ -65,9 +73,14 @@ int main()
                 if (event.keys.key == GLFW_KEY_ESCAPE)
                     window.close();
             }
+
+            if (event.type == jf::Event::BUFFER_CHANGED_EVENT)
+            {
+                glViewport(0, 0, event.sizeChanged.width, event.sizeChanged.height);
+            }
         }
 
-        window.clear(.2,.3,.3);
+        window.clear();
 
 
         shader.use();
