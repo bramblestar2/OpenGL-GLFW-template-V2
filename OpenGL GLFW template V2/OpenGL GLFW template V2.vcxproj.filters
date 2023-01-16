@@ -28,6 +28,12 @@
     <Filter Include="Resource Files\Shaders">
       <UniqueIdentifier>{bad66141-f814-4e32-8d65-e7070e802f1f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\vendor">
+      <UniqueIdentifier>{bd1a1ad1-673f-4215-9d2a-b99f62635819}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\vendor\stb_image">
+      <UniqueIdentifier>{9348f7b2-c8bc-4889-aee1-1753efb8b47d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OpenGL GLFW template V2.cpp">
@@ -39,32 +45,26 @@
     <ClCompile Include="Source Files\System\Vector3.cpp">
       <Filter>Source Files\System</Filter>
     </ClCompile>
-    <ClCompile Include="Source Files\Graphics\ContextSettings.cpp">
-      <Filter>Source Files\Graphics</Filter>
-    </ClCompile>
     <ClCompile Include="Source Files\Graphics\Window.cpp">
-      <Filter>Source Files\Graphics</Filter>
-    </ClCompile>
-    <ClCompile Include="Source Files\Graphics\Color.cpp">
       <Filter>Source Files\Graphics</Filter>
     </ClCompile>
     <ClCompile Include="Source Files\Graphics\View.cpp">
       <Filter>Source Files\Graphics</Filter>
     </ClCompile>
-    <ClCompile Include="Source Files\Graphics\Event.cpp">
-      <Filter>Source Files\Graphics</Filter>
-    </ClCompile>
     <ClCompile Include="Source Files\Graphics\EventHandler.cpp">
       <Filter>Source Files\Graphics</Filter>
     </ClCompile>
-    <ClCompile Include="Source Files\Graphics\Shader.cpp">
+    <ClCompile Include="stb_image.cpp">
+      <Filter>Resource Files\vendor\stb_image</Filter>
+    </ClCompile>
+    <ClCompile Include="Source Files\Graphics\VertexArray.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Source Files\Graphics\Texture.cpp">
       <Filter>Source Files\Graphics</Filter>
     </ClCompile>
     <ClCompile Include="Source Files\Graphics\Vertex.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Source Files\Graphics\VertexArray.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Graphics</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -98,11 +98,17 @@
     <ClInclude Include="Headers\Graphics\Shader.h">
       <Filter>Header Files\Graphics</Filter>
     </ClInclude>
-    <ClInclude Include="Headers\Graphics\Vertex.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="stb_image.h">
+      <Filter>Resource Files\vendor\stb_image</Filter>
     </ClInclude>
     <ClInclude Include="Headers\Graphics\VertexArray.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Graphics\Texture.h">
+      <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Graphics\Vertex.h">
+      <Filter>Header Files\Graphics</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

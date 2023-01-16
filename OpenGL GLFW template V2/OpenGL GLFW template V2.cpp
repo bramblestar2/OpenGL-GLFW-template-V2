@@ -32,11 +32,11 @@ int main()
 
     jf::VertexArray arr;
     arr.add(jf::Vertex{ glm::vec3(-0.5f, -0.5f, 0.0f), glm::vec4(1.f, 0.f, 0.f, 1.0f) });
-    arr.add(jf::Vertex{ glm::vec3(-0.5f, 0.5f,  0.0f), glm::vec4(0.f, 0.f, 1.f, 1.0f) });
-    arr.add(jf::Vertex{ glm::vec3(0.5f, 0.5f,   0.0f), glm::vec4(0.f, 1.f, 0.f, 1.0f) });
+    arr.add(jf::Vertex{ glm::vec3(-0.5f, 0.5f,  0.0f), glm::vec4(0.f, 1.f, 0.f, 1.0f) });
+    arr.add(jf::Vertex{ glm::vec3(0.5f, 0.5f,   0.0f), glm::vec4(0.f, 0.f, 1.f, 1.0f) });
     arr.add(jf::Vertex{ glm::vec3(-0.5f, -0.5f, 0.0f), glm::vec4(1.f, 0.f, 0.f, 1.0f) });
-    arr.add(jf::Vertex{ glm::vec3(0.5f, 0.5f,   0.0f), glm::vec4(0.f, 1.f, 0.f, 1.0f) });
-    arr.add(jf::Vertex{ glm::vec3(0.5f, -0.5f,  0.0f), glm::vec4(0.f, 0.f, 1.f, 1.0f) });
+    arr.add(jf::Vertex{ glm::vec3(0.5f, -0.5f,  0.0f), glm::vec4(0.f, 1.f, 0.f, 1.0f) });
+    arr.add(jf::Vertex{ glm::vec3(0.5f, 0.5f,   0.0f), glm::vec4(0.f, 0.f, 1.f, 1.0f) });
 
     jf::VertexArray arrTwo;
     arrTwo.add(jf::Vertex{ glm::vec3(-1, -1, 1), glm::vec4(1.f, 0.f, 0.f, 1) });
@@ -62,9 +62,6 @@ int main()
                 glViewport(0, 0, event.sizeChanged.width, event.sizeChanged.height);
             }
         }
-
-        double xpos, ypos;
-        glfwGetCursorPos(window.getWindow(), &xpos, &ypos);
 
         window.clear();
 

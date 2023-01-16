@@ -148,17 +148,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="OpenGL GLFW template V2.cpp" />
-    <ClCompile Include="Source Files\Graphics\Color.cpp" />
-    <ClCompile Include="Source Files\Graphics\ContextSettings.cpp" />
-    <ClCompile Include="Source Files\Graphics\Event.cpp" />
     <ClCompile Include="Source Files\Graphics\EventHandler.cpp" />
-    <ClCompile Include="Source Files\Graphics\Shader.cpp" />
+    <ClCompile Include="Source Files\Graphics\Texture.cpp" />
     <ClCompile Include="Source Files\Graphics\Vertex.cpp" />
     <ClCompile Include="Source Files\Graphics\VertexArray.cpp" />
     <ClCompile Include="Source Files\Graphics\View.cpp" />
     <ClCompile Include="Source Files\Graphics\Window.cpp" />
     <ClCompile Include="Source Files\System\Vector2.cpp" />
     <ClCompile Include="Source Files\System\Vector3.cpp" />
+    <ClCompile Include="stb_image.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GLFW Header.h" />
@@ -167,12 +165,14 @@
     <ClInclude Include="Headers\Graphics\Event.h" />
     <ClInclude Include="Headers\Graphics\EventHandler.h" />
     <ClInclude Include="Headers\Graphics\Shader.h" />
+    <ClInclude Include="Headers\Graphics\Texture.h" />
     <ClInclude Include="Headers\Graphics\Vertex.h" />
     <ClInclude Include="Headers\Graphics\VertexArray.h" />
     <ClInclude Include="Headers\Graphics\View.h" />
     <ClInclude Include="Headers\Graphics\Window.h" />
     <ClInclude Include="Headers\System\Vector2.h" />
     <ClInclude Include="Headers\System\Vector3.h" />
+    <ClInclude Include="stb_image.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="2dShader.frag" />
