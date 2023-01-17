@@ -18,7 +18,6 @@ namespace jf
 		void remove(const int index);
 		int count();
 
-
 		void draw(const GLenum type);
 
 
